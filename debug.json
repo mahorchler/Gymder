@@ -1,0 +1,638 @@
+[
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\mipmap-anydpi-v26_default_round.xml.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\mipmap-anydpi-v26\\default_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\mipmap-xxhdpi_ic_ricky_round.png.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\mipmap-xxhdpi\\ic_ricky_round.png"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\mipmap-xhdpi_ic_omar.png.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\mipmap-xhdpi\\ic_omar.png"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\drawable_ic_omar_background.xml.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\drawable\\ic_omar_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\mipmap-xxxhdpi_ic_maylin_round.png.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\mipmap-xxxhdpi\\ic_maylin_round.png"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\drawable_ic_arnav_background.xml.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\drawable\\ic_arnav_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\mipmap-hdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\mipmap-xxxhdpi_ic_omar_foreground.png.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\mipmap-xxxhdpi\\ic_omar_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\drawable-mdpi_ic_action_name.png.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\drawable-mdpi\\ic_action_name.png"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\drawable-xxhdpi_ic_like_name.png.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\drawable-xxhdpi\\ic_like_name.png"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\mipmap-xhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\mipmap-mdpi_defaultpfp.png.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\mipmap-mdpi\\defaultpfp.png"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\drawable-v24_ricky.jpg.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\drawable-v24\\ricky.jpg"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\mipmap-xxhdpi_ic_maylin_round.png.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\mipmap-xxhdpi\\ic_maylin_round.png"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\drawable_ic_baseline_chat_24.xml.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\drawable\\ic_baseline_chat_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\drawable-mdpi_ic_dislike_clicked.png.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\drawable-mdpi\\ic_dislike_clicked.png"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\drawable-xxhdpi_ic_dislike_clicked.png.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\drawable-xxhdpi\\ic_dislike_clicked.png"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\mipmap-hdpi_defaultpfp.png.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\mipmap-hdpi\\defaultpfp.png"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\drawable_background_right.xml.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\drawable\\background_right.xml"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\mipmap-xxxhdpi_ic_arnav_foreground.png.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\mipmap-xxxhdpi\\ic_arnav_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\mipmap-anydpi-v26_ic_maylin.xml.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\mipmap-anydpi-v26\\ic_maylin.xml"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\drawable-xhdpi_ic_dislike_name.png.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\drawable-xhdpi\\ic_dislike_name.png"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\mipmap-xxhdpi_ic_ricky.png.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\mipmap-xxhdpi\\ic_ricky.png"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\mipmap-xhdpi_ic_omar_foreground.png.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\mipmap-xhdpi\\ic_omar_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\drawable-mdpi_ic_dislike_name.png.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\drawable-mdpi\\ic_dislike_name.png"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\layout_fragment_profile.xml.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\layout\\fragment_profile.xml"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\layout_profilesetting.xml.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\layout\\profilesetting.xml"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\drawable-hdpi_ic_dislike_name.png.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\drawable-hdpi\\ic_dislike_name.png"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\drawable-anydpi_ic_dislike_name.xml.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\drawable-anydpi\\ic_dislike_name.xml"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\mipmap-mdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\drawable_ic_baseline_settings_24.xml.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\drawable\\ic_baseline_settings_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\mipmap-mdpi_ic_ricky.png.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\mipmap-mdpi\\ic_ricky.png"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\mipmap-xhdpi_ic_omar_round.png.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\mipmap-xhdpi\\ic_omar_round.png"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\mipmap-xxhdpi_ic_omar_round.png.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\mipmap-xxhdpi\\ic_omar_round.png"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\layout_profile_edit.xml.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\layout\\profile_edit.xml"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\drawable-v24_nopfp.webp.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\drawable-v24\\nopfp.webp"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\layout_login.xml.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\layout\\login.xml"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\mipmap-hdpi_ic_maylin_round.png.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\mipmap-hdpi\\ic_maylin_round.png"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\mipmap-xhdpi_ic_arnav.png.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\mipmap-xhdpi\\ic_arnav.png"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\mipmap-xxhdpi_ic_maylin_foreground.png.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\mipmap-xxhdpi\\ic_maylin_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\mipmap-mdpi_ic_maylin_round.png.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\mipmap-mdpi\\ic_maylin_round.png"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\drawable-mdpi_ic_like_name.png.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\drawable-mdpi\\ic_like_name.png"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\drawable-xhdpi_ic_like_name.png.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\drawable-xhdpi\\ic_like_name.png"
+    },
+    {
+        "merged": "com.group213.gymder.app-merged_res-44:/layout_fragment_profile.xml.flat",
+        "source": "com.group213.gymder.app-main-46:/layout/fragment_profile.xml"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\mipmap-anydpi-v26_ic_ricky.xml.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\mipmap-anydpi-v26\\ic_ricky.xml"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\mipmap-mdpi_ic_maylin_foreground.png.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\mipmap-mdpi\\ic_maylin_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\mipmap-hdpi_default_round.png.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\mipmap-hdpi\\default_round.png"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\layout_message_item_right.xml.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\layout\\message_item_right.xml"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\drawable_ic_maylin_background.xml.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\drawable\\ic_maylin_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\drawable_ic_baseline_search_24.xml.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\drawable\\ic_baseline_search_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\drawable-anydpi_ic_like_name.xml.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\drawable-anydpi\\ic_like_name.xml"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\layout_message_item_left.xml.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\layout\\message_item_left.xml"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\layout_register.xml.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\layout\\register.xml"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\mipmap-anydpi-v26_ic_arnav.xml.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\mipmap-anydpi-v26\\ic_arnav.xml"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\drawable-xxhdpi_ic_dislike_name.png.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\drawable-xxhdpi\\ic_dislike_name.png"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\drawable-v24_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\drawable-v24\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\drawable-hdpi_ic_like_name.png.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\drawable-hdpi\\ic_like_name.png"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\drawable_ic_ricky_background.xml.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\drawable\\ic_ricky_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\mipmap-hdpi_ic_arnav_foreground.png.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\mipmap-hdpi\\ic_arnav_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\mipmap-xxxhdpi_ic_arnav_round.png.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\mipmap-xxxhdpi\\ic_arnav_round.png"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\drawable-xxhdpi_ic_like_clicked.png.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\drawable-xxhdpi\\ic_like_clicked.png"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\layout_search_item.xml.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\layout\\search_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\mipmap-xxxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\mipmap-xxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\drawable-hdpi_ic_dislike_clicked.png.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\drawable-hdpi\\ic_dislike_clicked.png"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\mipmap-xxxhdpi_ic_ricky_foreground.png.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\mipmap-xxxhdpi\\ic_ricky_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\mipmap-xxhdpi_ic_omar_foreground.png.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\mipmap-xxhdpi\\ic_omar_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\mipmap-xxhdpi_defaultpfp.png.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\mipmap-xxhdpi\\defaultpfp.png"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\drawable-anydpi_ic_action_name.xml.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\drawable-anydpi\\ic_action_name.xml"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\mipmap-hdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\drawable_ic_baseline_person_24.xml.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\drawable\\ic_baseline_person_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\mipmap-xxxhdpi_ic_ricky_round.png.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\mipmap-xxxhdpi\\ic_ricky_round.png"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\mipmap-mdpi_ic_omar_foreground.png.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\mipmap-mdpi\\ic_omar_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\mipmap-xhdpi_ic_ricky_foreground.png.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\mipmap-xhdpi\\ic_ricky_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\menu_menu_main.xml.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\menu\\menu_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\mipmap-xhdpi_defaultpfp.png.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\mipmap-xhdpi\\defaultpfp.png"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\drawable\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\mipmap-anydpi-v26_defaultpfp.xml.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\mipmap-anydpi-v26\\defaultpfp.xml"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\layout_chat.xml.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\layout\\chat.xml"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\mipmap-hdpi_ic_ricky.png.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\mipmap-hdpi\\ic_ricky.png"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\drawable-anydpi_ic_like_clicked.xml.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\drawable-anydpi\\ic_like_clicked.xml"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\mipmap-anydpi-v26_ic_arnav_round.xml.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\mipmap-anydpi-v26\\ic_arnav_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\mipmap-anydpi-v26_ic_ricky_round.xml.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\mipmap-anydpi-v26\\ic_ricky_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\mipmap-hdpi_ic_omar_round.png.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\mipmap-hdpi\\ic_omar_round.png"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\drawable_baseline_thumb_down_24.xml.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\drawable\\baseline_thumb_down_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\drawable-mdpi_ic_like_clicked.png.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\drawable-mdpi\\ic_like_clicked.png"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\mipmap-xhdpi_ic_maylin_round.png.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\mipmap-xhdpi\\ic_maylin_round.png"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\drawable_default_foreground.xml.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\drawable\\default_foreground.xml"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\mipmap-xxxhdpi_ic_maylin.png.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\mipmap-xxxhdpi\\ic_maylin.png"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\xml_data_extraction_rules.xml.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\xml\\data_extraction_rules.xml"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\mipmap-hdpi_ic_arnav.png.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\mipmap-hdpi\\ic_arnav.png"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\mipmap-anydpi-v26_ic_omar.xml.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\mipmap-anydpi-v26\\ic_omar.xml"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\mipmap-mdpi_ic_maylin.png.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\mipmap-mdpi\\ic_maylin.png"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\mipmap-xxhdpi_ic_maylin.png.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\mipmap-xxhdpi\\ic_maylin.png"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\mipmap-mdpi_default_round.png.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\mipmap-mdpi\\default_round.png"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\mipmap-mdpi_ic_omar_round.png.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\mipmap-mdpi\\ic_omar_round.png"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\drawable-xhdpi_ic_like_clicked.png.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\drawable-xhdpi\\ic_like_clicked.png"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\mipmap-xhdpi_default_round.png.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\mipmap-xhdpi\\default_round.png"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\mipmap-mdpi_ic_arnav.png.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\mipmap-mdpi\\ic_arnav.png"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\layout_chat_item.xml.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\layout\\chat_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\drawable-v24_omar.jpg.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\drawable-v24\\omar.jpg"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\mipmap-xxhdpi_ic_arnav.png.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\mipmap-xxhdpi\\ic_arnav.png"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\layout_fragment_search.xml.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\layout\\fragment_search.xml"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\mipmap-xxhdpi_default_round.png.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\mipmap-xxhdpi\\default_round.png"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\mipmap-xhdpi_ic_arnav_round.png.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\mipmap-xhdpi\\ic_arnav_round.png"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\mipmap-xhdpi_ic_arnav_foreground.png.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\mipmap-xhdpi\\ic_arnav_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\mipmap-xxhdpi_ic_ricky_foreground.png.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\mipmap-xxhdpi\\ic_ricky_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\mipmap-hdpi_ic_arnav_round.png.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\mipmap-hdpi\\ic_arnav_round.png"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\menu_bottom_nav_menu.xml.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\menu\\bottom_nav_menu.xml"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\drawable-xxhdpi_ic_action_name.png.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\drawable-xxhdpi\\ic_action_name.png"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\drawable_ic_baseline_send_24.xml.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\drawable\\ic_baseline_send_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\drawable-v24_maylin.jpg.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\drawable-v24\\maylin.jpg"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\layout_profile_delete.xml.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\layout\\profile_delete.xml"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\mipmap-xhdpi_ic_ricky.png.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\mipmap-xhdpi\\ic_ricky.png"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\drawable-xhdpi_ic_dislike_clicked.png.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\drawable-xhdpi\\ic_dislike_clicked.png"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\navigation_nav_graph.xml.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\navigation\\nav_graph.xml"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\mipmap-anydpi-v26_ic_maylin_round.xml.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\mipmap-anydpi-v26\\ic_maylin_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\drawable-anydpi_ic_dislike_clicked.xml.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\drawable-anydpi\\ic_dislike_clicked.xml"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\xml_backup_rules.xml.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\xml\\backup_rules.xml"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\mipmap-hdpi_ic_omar_foreground.png.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\mipmap-hdpi\\ic_omar_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\drawable-xhdpi_ic_action_name.png.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\drawable-xhdpi\\ic_action_name.png"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\mipmap-hdpi_ic_ricky_foreground.png.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\mipmap-hdpi\\ic_ricky_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\mipmap-xxxhdpi_ic_maylin_foreground.png.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\mipmap-xxxhdpi\\ic_maylin_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\mipmap-xxxhdpi_defaultpfp.png.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\mipmap-xxxhdpi\\defaultpfp.png"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\mipmap-xxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\mipmap-hdpi_ic_maylin_foreground.png.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\mipmap-hdpi\\ic_maylin_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\layout_main.xml.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\layout\\main.xml"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\mipmap-hdpi_ic_ricky_round.png.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\mipmap-hdpi\\ic_ricky_round.png"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\mipmap-xxhdpi_ic_arnav_foreground.png.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\mipmap-xxhdpi\\ic_arnav_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\mipmap-xxxhdpi_default_round.png.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\mipmap-xxxhdpi\\default_round.png"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\layout_searched_user.xml.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\layout\\searched_user.xml"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\mipmap-hdpi_ic_omar.png.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\mipmap-hdpi\\ic_omar.png"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\mipmap-xhdpi_ic_ricky_round.png.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\mipmap-xhdpi\\ic_ricky_round.png"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\drawable-v24_arnav.jpeg.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\drawable-v24\\arnav.jpeg"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\mipmap-mdpi_ic_omar.png.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\mipmap-mdpi\\ic_omar.png"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\mipmap-xxxhdpi_ic_arnav.png.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\mipmap-xxxhdpi\\ic_arnav.png"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\mipmap-xxhdpi_ic_arnav_round.png.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\mipmap-xxhdpi\\ic_arnav_round.png"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\mipmap-mdpi_ic_arnav_foreground.png.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\mipmap-mdpi\\ic_arnav_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\mipmap-xhdpi_ic_maylin.png.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\mipmap-xhdpi\\ic_maylin.png"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\layout_fragment_chat.xml.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\layout\\fragment_chat.xml"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\mipmap-hdpi_ic_maylin.png.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\mipmap-hdpi\\ic_maylin.png"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\drawable-hdpi_ic_action_name.png.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\drawable-hdpi\\ic_action_name.png"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\mipmap-mdpi_ic_ricky_foreground.png.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\mipmap-mdpi\\ic_ricky_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\mipmap-xhdpi_ic_maylin_foreground.png.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\mipmap-xhdpi\\ic_maylin_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\mipmap-mdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\drawable_background_left.xml.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\drawable\\background_left.xml"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\mipmap-xxxhdpi_ic_omar.png.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\mipmap-xxxhdpi\\ic_omar.png"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\drawable-hdpi_ic_like_clicked.png.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\drawable-hdpi\\ic_like_clicked.png"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\mipmap-xxxhdpi_ic_omar_round.png.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\mipmap-xxxhdpi\\ic_omar_round.png"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\drawable-v24_background.jpg.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\drawable-v24\\background.jpg"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\mipmap-xhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\mipmap-anydpi-v26_ic_omar_round.xml.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\mipmap-anydpi-v26\\ic_omar_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\mipmap-xxhdpi_ic_omar.png.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\mipmap-xxhdpi\\ic_omar.png"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\mipmap-xxxhdpi_ic_ricky.png.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\mipmap-xxxhdpi\\ic_ricky.png"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\mipmap-mdpi_ic_arnav_round.png.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\mipmap-mdpi\\ic_arnav_round.png"
+    },
+    {
+        "merged": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-merged_res-44:\\mipmap-mdpi_ic_ricky_round.png.flat",
+        "source": "C:\\Users\\Reqwer\\.gradle\\daemon\\7.5\\com.group213.gymder.app-main-46:\\mipmap-mdpi\\ic_ricky_round.png"
+    }
+]
