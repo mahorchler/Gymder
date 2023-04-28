@@ -97,6 +97,8 @@ public class User implements Serializable{
         this.email = email;
     }
 
+    public String getPassword(){ return this.password; }
+
     public void setInterests(ArrayList<String> interests) {
         this.interests = interests;
     }
