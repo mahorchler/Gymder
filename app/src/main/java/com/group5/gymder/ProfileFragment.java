@@ -14,6 +14,8 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.group213.gymder.R;
 
 import de.hdodenhof.circleimageview.CircleImageView;
@@ -25,8 +27,8 @@ import de.hdodenhof.circleimageview.CircleImageView;
  */
 public class ProfileFragment extends Fragment{
     private Toolbar toolbar;
-    private TextView username;
     private TextView name;
+    private TextView email;
     private CircleImageView pfp;
     private TextView age;
     private TextView interests;
@@ -35,6 +37,8 @@ public class ProfileFragment extends Fragment{
     private Button delete;
 
     private Button logout;
+
+    private FirebaseAuth mAuth;
 
     private View view;
     // TODO: Rename parameter arguments, choose names that match
@@ -81,17 +85,19 @@ public class ProfileFragment extends Fragment{
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_profile, container, false);
-        username = view.findViewById(R.id.profileUsername);
+        mAuth = FirebaseAuth.getInstance();
+        FirebaseUser user = mAuth.getCurrentUser();
+        name = view.findViewById(R.id.profileName);
         toolbar = view.findViewById(R.id.profileToolbar);
         pfp = view.findViewById(R.id.profilePFP);
-        name = view.findViewById(R.id.profileName);
+        email = view.findViewById(R.id.profileEmail);
         age = view.findViewById(R.id.profileAge);
         interests = view.findViewById(R.id.profileInterests);
-        username.setText(user.getUsername());
-        name.setText(user.getName());
-        String age = user.getAge() + " years old";
-        this.age.setText(age);
-        Drawable pfp = user.getProfilePicture();
+        //name.setText(user.getName());
+        email.setText(user.getEmail());
+        //String age = user.getAge() + " years old";
+        //this.age.setText(age);
+        Drawable pfp = null; //update with pic url
         if (pfp == null) {
             this.pfp.setImageResource(R.mipmap.defaultpfp);
         }
@@ -102,18 +108,19 @@ public class ProfileFragment extends Fragment{
         delete = view.findViewById(R.id.profileDelete);
         delete.setOnClickListener(view1 -> deleteProfile());
         logout = view.findViewById(R.id.profileLogout);
-        logout.setOnClickListener(view1 -> logout());
+        logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                logout();
+            }
+        });
         return view;
-    }
-
-    public void setUser(User user) {
-        this.user = user;
     }
 
     private void editProfile() {
         Context context = view.getContext();
         Intent intent = new Intent(context, EditProfileActivity.class);
-        intent.putExtra("username", username.getText().toString());
+        intent.putExtra("email", email.getText().toString());
         intent.putExtra("name", name.getText().toString());
         intent.putExtra("age", user.getAge()+"");
         intent.putExtra("Interests", interests.getText());
@@ -127,6 +134,7 @@ public class ProfileFragment extends Fragment{
     }
 
     private void logout(){
+        FirebaseAuth.getInstance().signOut();
         getActivity().finish();
     }
 }

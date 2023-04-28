@@ -25,10 +25,10 @@
 
         </androidx.appcompat.widget.Toolbar>
         <TextView
-            android:id="@+id/profileUsername"
+            android:id="@+id/profileName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Username"
+            android:text="Name"
             android:textColor="#fff"
             android:textSize="22sp"
             app:layout_constraintBottom_toBottomOf="@+id/profileToolbar"
@@ -50,10 +50,10 @@
         </de.hdodenhof.circleimageview.CircleImageView>
 
         <TextView
-            android:id="@+id/profileName"
+            android:id="@+id/profileEmail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Name"
+            android:text="Email"
             android:textColor="#000000"
             android:textSize="18sp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -72,7 +72,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/profileName"
+            app:layout_constraintTop_toBottomOf="@+id/profileEmail"
             app:layout_constraintVertical_bias="0.02" />
 
         <TextView
@@ -82,7 +82,7 @@
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="10dp"
-            android:text="Interesets"
+            android:text="Interests"
             android:gravity="top|center"
             android:textColor="#000000"
             app:layout_constraintEnd_toEndOf="parent"

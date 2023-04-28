@@ -14,7 +14,7 @@ import java.util.Scanner;
 public class User implements Serializable{
 
     private boolean isHost;
-    private String username;
+    private String email;
     private String password;
     private String name;
     private Drawable profilePicture;
@@ -34,19 +34,10 @@ public class User implements Serializable{
      */
     private int age;
 
-    /**
-     * Email
-     */
-    private String email;
-
-    public User(String username, String password) {
-        this.username = username;
+    public User(String email, String password) {
+        this.email = email;
         this.password = password;
         isHost = false;
-    }
-
-    public String getUsername() {
-        return this.username;
     }
 
     public void addInterest(String interest) {
@@ -123,9 +114,9 @@ public class User implements Serializable{
         }
         try {
             FileWriter fr = new FileWriter(userFile, true);
-            fr.write(username+" "+user2.getUsername()+"\n");
+            fr.write(email+" "+user2.getEmail()+"\n");
             fr.close();
-            boolean theyMatched = checkMatch(username, user2.getUsername(), userFile);
+            boolean theyMatched = checkMatch(email, user2.getEmail(), userFile);
             if(theyMatched) {
                 //OPEN CHAT
             }
@@ -135,7 +126,7 @@ public class User implements Serializable{
         }
     }
 
-    public boolean checkMatch(String username1, String username2, File likes) {
+    public boolean checkMatch(String email1, String email2, File likes) {
         boolean way1 = false;
         boolean way2 = false;
         HashMap<String, ArrayList<String>> userMap = new HashMap<String, ArrayList<String>>();
@@ -146,15 +137,15 @@ public class User implements Serializable{
                 String[] users = line.split(" ");
                 String user1 = users[0];
                 String user2 = users[1];
-                if(user1.trim().equals(username1) && user2.trim().equals(username2)) {
+                if(user1.trim().equals(email1) && user2.trim().equals(email2)) {
                     way1 = true;
                 }
-                if(user1.trim().equals(username2) && user2.trim().equals(username1)) {
+                if(user1.trim().equals(email2) && user2.trim().equals(email1)) {
                     way2 = true;
                 }
             }
             if(way1 && way2) {
-                System.out.println("There was a match between " + username1 + " and " + username2);
+                System.out.println("There was a match between " + email1 + " and " + email2);
                 return true;
             }
             return false;
@@ -163,9 +154,5 @@ public class User implements Serializable{
             System.out.println("File Not Found");
             return false;
         }
-    }
-
-    public boolean correctCredentials(String username, String password){
-        return (this.username.equalsIgnoreCase(username))&&(this.password.equals(password));
     }
 }

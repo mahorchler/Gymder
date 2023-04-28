@@ -1,11 +1,14 @@
 package com.group5.gymder;
 
+import android.content.Intent;
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.group213.gymder.R;
 import com.group213.gymder.databinding.MainBinding;
 
@@ -18,6 +21,8 @@ public class AppActivity extends AppCompatActivity {
     private ProfileFragment profileFragment;
     private ArrayList<User> userList;
     private ArrayList<String> lastMessages;
+    private FirebaseAuth mAuth;
+    private FirebaseUser currentUser;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -27,16 +32,19 @@ public class AppActivity extends AppCompatActivity {
         chatFragment = new ChatFragment();
         searchFragment = new SearchFragment();
         profileFragment = new ProfileFragment();
+
+        mAuth = FirebaseAuth.getInstance();
+        currentUser = mAuth.getCurrentUser();
+        if (currentUser == null) {
+            finish();
+        }
+
         userList = new ArrayList<>();
         lastMessages = new ArrayList<>();
         setUserInfo();
         chatFragment.setUserList(userList);
         chatFragment.setLastMessages(lastMessages);
         searchFragment.setUserList(userList);
-        User current = new User("cs431", "12345");
-        current.setName("Group 5");
-        current.setAge(22);
-        profileFragment.setUser(current);
         replaceFragment(chatFragment);
         binding.bottomNavigationView.setOnItemSelectedListener(item -> {
             switch (item.getItemId()){
