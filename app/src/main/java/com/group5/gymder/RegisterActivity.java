@@ -61,6 +61,11 @@ public class RegisterActivity extends AppCompatActivity {
                 return;
             }
         }
+        if (!password.getText().toString().equals(confirmPassword.getText().toString())) {
+            Toast.makeText(this, "Passwords do not match", Toast.LENGTH_LONG).show();
+            return;
+        }
+
         mAuth.createUserWithEmailAndPassword(email.getText().toString(), password.getText().toString())
             .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                 @Override
@@ -81,7 +86,6 @@ public class RegisterActivity extends AppCompatActivity {
                                     showAppActivity();
                                 }
                             });
-                        showAppActivity();
                     } else {
                         Toast.makeText(RegisterActivity.this, "Authentication failed.",
                                 Toast.LENGTH_LONG).show();
