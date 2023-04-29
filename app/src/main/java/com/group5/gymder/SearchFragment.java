@@ -28,7 +28,6 @@ public class SearchFragment extends Fragment {
     private RecyclerView searchRecycler;
     private SearchView searchView;
     private SearchAdapter searchAdapter;
-    private TextView textView;
     private View view;
     
     // TODO: Rename parameter arguments, choose names that match
