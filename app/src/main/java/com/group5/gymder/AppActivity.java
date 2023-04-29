@@ -68,7 +68,7 @@ public class AppActivity extends AppCompatActivity {
         chatFragment.setUserList(userList);
         chatFragment.setLastMessages(lastMessages);
         searchFragment.setUserList(userList);
-        replaceFragment(chatFragment);
+        replaceFragment(searchFragment);
         binding.bottomNavigationView.setOnItemSelectedListener(item -> {
             switch (item.getItemId()){
                 case R.id.chat:

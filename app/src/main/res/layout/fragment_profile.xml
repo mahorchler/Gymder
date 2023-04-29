@@ -76,9 +76,35 @@
             app:layout_constraintVertical_bias="0.02" />
 
         <TextView
+            android:id="@+id/profileGender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gender"
+            android:textSize="14sp"
+            android:textColor="#000000"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/profileAge"
+            app:layout_constraintVertical_bias="0.02" />
+
+        <TextView
+            android:id="@+id/profileGym"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gym"
+            android:textSize="14sp"
+            android:textColor="#000000"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/profileGender"
+            app:layout_constraintVertical_bias="0.02" />
+
+        <TextView
             android:id="@+id/profileInterests"
-            android:layout_width="0dp"
-            android:layout_height="100dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="10dp"
@@ -87,7 +113,7 @@
             android:textColor="#000000"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/profileAge" />
+            app:layout_constraintTop_toBottomOf="@+id/profileGym" />
 
         <View
             android:id="@+id/divider4"
@@ -107,9 +133,10 @@
             android:text="Edit profile"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/profileInterests"
-            app:layout_constraintVertical_bias="0.01999998" />
+            app:layout_constraintVertical_bias="0.1" />
 
         <Button
             android:id="@+id/profileDelete"

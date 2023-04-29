@@ -38,6 +38,8 @@ public class ProfileFragment extends Fragment{
     private TextView email;
     private CircleImageView pfp;
     private TextView age;
+    private TextView gender;
+    private TextView gym;
     private TextView interests;
     private Button editProfile;
     private Button delete;
@@ -45,6 +47,11 @@ public class ProfileFragment extends Fragment{
     private Button logout;
 
     private FirebaseAuth mAuth;
+    private String password;
+    private String ageString;
+    private String genderString;
+    private String gymString;
+    private String interestsString;
 
     private View view;
     // TODO: Rename parameter arguments, choose names that match
@@ -98,11 +105,12 @@ public class ProfileFragment extends Fragment{
         pfp = view.findViewById(R.id.profilePFP);
         email = view.findViewById(R.id.profileEmail);
         age = view.findViewById(R.id.profileAge);
+        gender = view.findViewById(R.id.profileGender);
+        gym = view.findViewById(R.id.profileGym);
         interests = view.findViewById(R.id.profileInterests);
 
         Drawable pfp = null;
         email.setText(currentUser.getEmail());
-
 
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference reference = database.getReference("users").child(currentUser.getUid());
@@ -112,10 +120,15 @@ public class ProfileFragment extends Fragment{
                 User user = snapshot.getValue(User.class);
                 if (user != null) {
                     name.setText(user.getName());
-                    String ageString = user.getAge() + " years old";
-                    age.setText(ageString);
-                    String interestsString = "Interest(s): " + user.getInterests();
-                    interests.setText(interestsString);
+                    ageString = user.getAge();
+                    age.setText(ageString + " years old");
+                    genderString = user.getGender();
+                    gender.setText("Gender: " + genderString);
+                    gymString = user.getGym();
+                    gym.setText("Gym: " + gymString);
+                    interestsString = user.getInterests();
+                    interests.setText("Interest(s): " + interestsString);
+                    password = user.getPassword();
                 }
             }
 
@@ -148,9 +161,12 @@ public class ProfileFragment extends Fragment{
         Context context = view.getContext();
         Intent intent = new Intent(context, EditProfileActivity.class);
         intent.putExtra("email", email.getText().toString());
+        intent.putExtra("password", password);
         intent.putExtra("name", name.getText().toString());
-        //intent.putExtra("age", user.getAge()+"");
-        intent.putExtra("Interests", interests.getText());
+        intent.putExtra("age", ageString);
+        intent.putExtra("gender", genderString);
+        intent.putExtra("gym", gymString);
+        intent.putExtra("interests", interestsString);
         context.startActivity(intent);
     }
 

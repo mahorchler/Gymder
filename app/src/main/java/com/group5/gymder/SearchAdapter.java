@@ -64,7 +64,7 @@ public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.MyViewHold
             Intent searchIntent = new Intent(context, UserActivity.class);
             searchIntent.putExtra("name", profileName);
             searchIntent.putExtra("email", email);
-            searchIntent.putExtra("age", user.getAge()+"");
+            searchIntent.putExtra("age", user.getAge());
             context.startActivity(searchIntent);
         });
     }
