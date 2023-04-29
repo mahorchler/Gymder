@@ -28,7 +28,6 @@ public class SearchFragment extends Fragment {
     private RecyclerView searchRecycler;
     private SearchView searchView;
     private SearchAdapter searchAdapter;
-    private TextView textView;
     private View view;
     
     // TODO: Rename parameter arguments, choose names that match
@@ -95,7 +94,7 @@ public class SearchFragment extends Fragment {
 
     private void filterUsers(String s) {
         ArrayList<User> filteredList = new ArrayList<>();
-        for (User user : userList) if (user.getUsername().toLowerCase(Locale.ROOT).startsWith(s)) filteredList.add(user);
+        for (User user : userList) if (user.getEmail().toLowerCase(Locale.ROOT).startsWith(s)) filteredList.add(user);
         searchAdapter.setList(filteredList);
     }
 

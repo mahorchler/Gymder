@@ -12,17 +12,11 @@ import java.util.HashMap;
 import java.util.Scanner;
 
 public class User implements Serializable{
-
-    private boolean isHost;
-    private String username;
+    private String uid;
+    private String email;
     private String password;
     private String name;
     private Drawable profilePicture;
-
-    /**
-     * List of Users Interest
-     */
-    private ArrayList<String> interests;
 
     /**
      * Gym user is subscribed to
@@ -32,45 +26,50 @@ public class User implements Serializable{
     /**
      * Age
      */
-    private int age;
+    private String age;
 
     /**
-     * Email
+     * Gender
      */
-    private String email;
+    private String gender;
 
-    public User(String username, String password) {
-        this.username = username;
+    /**
+     * User's Interests
+     */
+    private String interests;
+
+    /**
+     * pfp URL
+     */
+    private String pfp;
+
+    public User(){
+    }
+
+    public User(String uid, String email, String password) {
+        this.uid = uid;
+        this.email = email;
         this.password = password;
-        isHost = false;
     }
 
-    public String getUsername() {
-        return this.username;
-    }
+    public String getUid() { return this.uid; }
 
-    public void addInterest(String interest) {
-        this.interests.add(interest);
-    }
-
-    public ArrayList<String> getInterests(){
-        return this.interests;
-    }
-
-    public void setGym(String gym) {
-        this.gym = gym;
-    }
-
-    public String getGym() {
-        return this.gym;
-    }
-
-    public int getAge() {
-        return this.age;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public String getEmail() {
         return this.email;
+    }
+
+    public String getPassword(){ return this.password; }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
     }
 
     public void setProfilePicture(Drawable profilePicture){
@@ -81,33 +80,43 @@ public class User implements Serializable{
         return profilePicture;
     }
 
-    public String getName() {
-        return name;
+    public void setGym(String gym) {
+        this.gym = gym;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public String getGym() {
+        return this.gym;
     }
 
-    public void setAge(int age) {
+    public void setAge(String age) {
         this.age = age;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public String getAge() { return this.age; }
+
+    public void setGender(String gender) {
+        this.gender = gender;
     }
 
-    public String getPassword(){ return this.password; }
+    public String getGender() {
+        return this.gender;
+    }
 
-    public void setInterests(ArrayList<String> interests) {
+    public void setInterests(String interests) {
         this.interests = interests;
     }
 
-    public void setHost(boolean host) {
-        isHost = host;
+    public String getInterests(){
+        return this.interests;
     }
 
-    public boolean isHost(){return isHost;}
+    public void setPfp(String pfp) {
+        this.pfp = pfp;
+    }
+
+    public String getPfp(){
+        return this.pfp;
+    }
 
     public void likeUser(User user2) {
         File userFile = new File("likes.txt");
@@ -123,9 +132,9 @@ public class User implements Serializable{
         }
         try {
             FileWriter fr = new FileWriter(userFile, true);
-            fr.write(username+" "+user2.getUsername()+"\n");
+            fr.write(email+" "+user2.getEmail()+"\n");
             fr.close();
-            boolean theyMatched = checkMatch(username, user2.getUsername(), userFile);
+            boolean theyMatched = checkMatch(email, user2.getEmail(), userFile);
             if(theyMatched) {
                 //OPEN CHAT
             }
@@ -135,7 +144,7 @@ public class User implements Serializable{
         }
     }
 
-    public boolean checkMatch(String username1, String username2, File likes) {
+    public boolean checkMatch(String email1, String email2, File likes) {
         boolean way1 = false;
         boolean way2 = false;
         HashMap<String, ArrayList<String>> userMap = new HashMap<String, ArrayList<String>>();
@@ -146,15 +155,15 @@ public class User implements Serializable{
                 String[] users = line.split(" ");
                 String user1 = users[0];
                 String user2 = users[1];
-                if(user1.trim().equals(username1) && user2.trim().equals(username2)) {
+                if(user1.trim().equals(email1) && user2.trim().equals(email2)) {
                     way1 = true;
                 }
-                if(user1.trim().equals(username2) && user2.trim().equals(username1)) {
+                if(user1.trim().equals(email2) && user2.trim().equals(email1)) {
                     way2 = true;
                 }
             }
             if(way1 && way2) {
-                System.out.println("There was a match between " + username1 + " and " + username2);
+                System.out.println("There was a match between " + email1 + " and " + email2);
                 return true;
             }
             return false;
@@ -163,9 +172,5 @@ public class User implements Serializable{
             System.out.println("File Not Found");
             return false;
         }
-    }
-
-    public boolean correctCredentials(String username, String password){
-        return (this.username.equalsIgnoreCase(username))&&(this.password.equals(password));
     }
 }

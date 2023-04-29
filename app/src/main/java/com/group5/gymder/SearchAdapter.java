@@ -33,13 +33,13 @@ public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.MyViewHold
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
         private CircleImageView searchProfilePicture;
-        private TextView searchUsername;
+        private TextView searchEmail;
         private TextView searchName;
 
         public MyViewHolder(final View view) {
             super(view);
             searchProfilePicture = view.findViewById(R.id.searchPFP);
-            searchUsername = view.findViewById(R.id.searchUsername);
+            searchEmail = view.findViewById(R.id.searchEmail);
             searchName = view.findViewById(R.id.searchName);
         }
     }
@@ -56,15 +56,15 @@ public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.MyViewHold
         User user = usersList.get(position);
         Drawable profilePicture = user.getProfilePicture();
         String profileName = user.getName();
-        String username = user.getUsername();
+        String email = user.getEmail();
         holder.searchProfilePicture.setImageDrawable(profilePicture);
         holder.searchName.setText(profileName);
-        holder.searchUsername.setText(username);
+        holder.searchEmail.setText(email);
         holder.itemView.setOnClickListener(view -> {
             Intent searchIntent = new Intent(context, UserActivity.class);
             searchIntent.putExtra("name", profileName);
-            searchIntent.putExtra("username", username);
-            searchIntent.putExtra("age", user.getAge()+"");
+            searchIntent.putExtra("email", email);
+            searchIntent.putExtra("age", user.getAge());
             context.startActivity(searchIntent);
         });
     }

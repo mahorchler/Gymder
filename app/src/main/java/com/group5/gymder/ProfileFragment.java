@@ -5,15 +5,24 @@ import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.group213.gymder.R;
 
 import de.hdodenhof.circleimageview.CircleImageView;
@@ -25,16 +34,24 @@ import de.hdodenhof.circleimageview.CircleImageView;
  */
 public class ProfileFragment extends Fragment{
     private Toolbar toolbar;
-    private TextView username;
     private TextView name;
+    private TextView email;
     private CircleImageView pfp;
     private TextView age;
+    private TextView gender;
+    private TextView gym;
     private TextView interests;
-    private User user;
     private Button editProfile;
     private Button delete;
 
     private Button logout;
+
+    private FirebaseAuth mAuth;
+    private String password;
+    private String ageString;
+    private String genderString;
+    private String gymString;
+    private String interestsString;
 
     private View view;
     // TODO: Rename parameter arguments, choose names that match
@@ -81,42 +98,75 @@ public class ProfileFragment extends Fragment{
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_profile, container, false);
-        username = view.findViewById(R.id.profileUsername);
+        mAuth = FirebaseAuth.getInstance();
+        FirebaseUser currentUser = mAuth.getCurrentUser();
+        name = view.findViewById(R.id.profileName);
         toolbar = view.findViewById(R.id.profileToolbar);
         pfp = view.findViewById(R.id.profilePFP);
-        name = view.findViewById(R.id.profileName);
+        email = view.findViewById(R.id.profileEmail);
         age = view.findViewById(R.id.profileAge);
+        gender = view.findViewById(R.id.profileGender);
+        gym = view.findViewById(R.id.profileGym);
         interests = view.findViewById(R.id.profileInterests);
-        username.setText(user.getUsername());
-        name.setText(user.getName());
-        String age = user.getAge() + " years old";
-        this.age.setText(age);
-        Drawable pfp = user.getProfilePicture();
+
+        Drawable pfp = null;
+        email.setText(currentUser.getEmail());
+
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference reference = database.getReference("users").child(currentUser.getUid());
+        reference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                User user = snapshot.getValue(User.class);
+                if (user != null) {
+                    name.setText(user.getName());
+                    ageString = user.getAge();
+                    age.setText(ageString + " years old");
+                    genderString = user.getGender();
+                    gender.setText("Gender: " + genderString);
+                    gymString = user.getGym();
+                    gym.setText("Gym: " + gymString);
+                    interestsString = user.getInterests();
+                    interests.setText("Interest(s): " + interestsString);
+                    password = user.getPassword();
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+            }
+        });
+
         if (pfp == null) {
             this.pfp.setImageResource(R.mipmap.defaultpfp);
         }
         else this.pfp.setImageDrawable(pfp);
+
         this.view = view;
         editProfile = view.findViewById(R.id.profileEdit);
         editProfile.setOnClickListener(view1 -> editProfile());
         delete = view.findViewById(R.id.profileDelete);
         delete.setOnClickListener(view1 -> deleteProfile());
         logout = view.findViewById(R.id.profileLogout);
-        logout.setOnClickListener(view1 -> logout());
+        logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                logout();
+            }
+        });
         return view;
-    }
-
-    public void setUser(User user) {
-        this.user = user;
     }
 
     private void editProfile() {
         Context context = view.getContext();
         Intent intent = new Intent(context, EditProfileActivity.class);
-        intent.putExtra("username", username.getText().toString());
+        intent.putExtra("email", email.getText().toString());
+        intent.putExtra("password", password);
         intent.putExtra("name", name.getText().toString());
-        intent.putExtra("age", user.getAge()+"");
-        intent.putExtra("Interests", interests.getText());
+        intent.putExtra("age", ageString);
+        intent.putExtra("gender", genderString);
+        intent.putExtra("gym", gymString);
+        intent.putExtra("interests", interestsString);
         context.startActivity(intent);
     }
 
@@ -127,6 +177,7 @@ public class ProfileFragment extends Fragment{
     }
 
     private void logout(){
+        FirebaseAuth.getInstance().signOut();
         getActivity().finish();
     }
 }

@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "671544015979",
+    "firebase_url": "https://gymder-248a2-default-rtdb.firebaseio.com",
+    "project_id": "gymder-248a2",
+    "storage_bucket": "gymder-248a2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:671544015979:android:f323fe0c81bdbb5f1a452e",
+        "android_client_info": {
+          "package_name": "com.group5.gymder"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "671544015979-rjhlvpc4cks0ntfl5mairlurfrofd334.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.group5.gymder",
+            "certificate_hash": "6a26fdc15e2423d21271a43b2fb500b9a4cec619"
+          }
+        },
+        {
+          "client_id": "671544015979-a1b95ifrm4btpvmd57lfs39divou85n1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDAc1C8dZxkCMQqwkiBe_03igeGsv881iE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "671544015979-a1b95ifrm4btpvmd57lfs39divou85n1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

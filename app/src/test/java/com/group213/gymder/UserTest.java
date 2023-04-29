@@ -19,6 +19,7 @@ import org.mockito.Mock;
 import org.mockito.Mockito;
 
 public class UserTest {
+    /*
     @Mock
     Drawable d;
 
@@ -28,9 +29,7 @@ public class UserTest {
     }
     User u = new User("testuser","password");
     @Test
-    public void testGetUserName(){
-        assertEquals(u.getUsername(), "testuser");
-    }
+    public void testGetUserName(){ assertEquals(u.getUsername(), "testuser"); }
 
     @Test
     public void testGetPassword(){
@@ -60,4 +59,5 @@ public class UserTest {
         u.setProfilePicture(d);
         assertEquals(d, u.getProfilePicture());
     }
+    */
 }

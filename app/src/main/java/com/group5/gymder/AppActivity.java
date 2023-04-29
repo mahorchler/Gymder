@@ -1,11 +1,22 @@
 package com.group5.gymder;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
+
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.group213.gymder.R;
 import com.group213.gymder.databinding.MainBinding;
 
@@ -18,6 +29,8 @@ public class AppActivity extends AppCompatActivity {
     private ProfileFragment profileFragment;
     private ArrayList<User> userList;
     private ArrayList<String> lastMessages;
+    private FirebaseAuth mAuth;
+    private FirebaseUser currentUser;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -27,17 +40,35 @@ public class AppActivity extends AppCompatActivity {
         chatFragment = new ChatFragment();
         searchFragment = new SearchFragment();
         profileFragment = new ProfileFragment();
+
+        mAuth = FirebaseAuth.getInstance();
+        currentUser = mAuth.getCurrentUser();
+        if (currentUser == null) {
+            finish();
+        }
+
         userList = new ArrayList<>();
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference reference = database.getReference("users");
+        reference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                for (DataSnapshot s: snapshot.getChildren()){
+                    userList.add((User) s.getValue(User.class));
+                }
+            }
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+            }
+        });
+
         lastMessages = new ArrayList<>();
-        setUserInfo();
         chatFragment.setUserList(userList);
         chatFragment.setLastMessages(lastMessages);
         searchFragment.setUserList(userList);
-        User current = new User("cs431", "12345");
-        current.setName("Group 5");
-        current.setAge(22);
-        profileFragment.setUser(current);
-        replaceFragment(chatFragment);
+
+        replaceFragment(searchFragment);
+        binding.bottomNavigationView.setSelectedItemId(R.id.search);
         binding.bottomNavigationView.setOnItemSelectedListener(item -> {
             switch (item.getItemId()){
                 case R.id.chat:
@@ -61,6 +92,7 @@ public class AppActivity extends AppCompatActivity {
         fragmentTransaction.commit();
     }
 
+    /*
     public void setUserInfo(){
         User user = new User("Omar", "12345");
         user.setName("Omar");
@@ -95,4 +127,5 @@ public class AppActivity extends AppCompatActivity {
         userList.add(user);
         lastMessages.add("My name is Arnav.");
     }
+     */
 }

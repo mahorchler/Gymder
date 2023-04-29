@@ -10,14 +10,14 @@
         android:id="@+id/password_register"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:hint="Password..."
+        android:hint="Password (min 6 characters) ..."
         android:minHeight="48dp"
         android:textColor="#000000"
         android:textColorHint="#373737"
         android:layout_margin="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/username_register" />
+        app:layout_constraintTop_toBottomOf="@+id/email_register" />
 
     <EditText
         android:id="@+id/confirm_register"
@@ -49,34 +49,18 @@
         app:layout_constraintVertical_bias="0.100000024" />
 
     <EditText
-        android:id="@+id/username_register"
+        android:id="@+id/gym_register"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:hint="Username..."
-        android:minHeight="48dp"
-        android:textColor="#000000"
-        android:textColorHint="#373737"
-        android:layout_margin="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/email_register"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <EditText
-        android:id="@+id/address_register"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:hint="Gym address..."
+        android:hint="Gym..."
         android:minHeight="48dp"
         android:textColor="#000000"
         android:textColorHint="#373737"
         android:layout_margin="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/confirm_register" />
+        app:layout_constraintTop_toBottomOf="@+id/gender_register" />
 
 
     <EditText
@@ -84,7 +68,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:hint="age..."
+        android:hint="Age..."
         android:inputType="number"
         android:minHeight="48dp"
         android:textColor="#000000"
@@ -92,21 +76,21 @@
         android:layout_margin="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/address_register" />
+        app:layout_constraintTop_toBottomOf="@+id/name_register" />
 
     <EditText
         android:id="@+id/name_register"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:hint="name..."
+        android:hint="Name..."
         android:minHeight="48dp"
         android:textColor="#000000"
         android:textColorHint="#373737"
         android:layout_margin="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/age_register" />
+        app:layout_constraintTop_toBottomOf="@+id/confirm_register" />
 
     <EditText
         android:id="@+id/gender_register"
@@ -120,19 +104,7 @@
         android:layout_margin="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/name_register" />
-
-    <Button
-        android:id="@+id/register2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/register"
-        android:onClick="registerUser"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/gender_register"
-        app:layout_constraintVertical_bias="0.8" />
+        app:layout_constraintTop_toBottomOf="@+id/age_register" />
 
     <EditText
         android:id="@+id/interests_register"
@@ -147,6 +119,18 @@
         app:layout_constraintBottom_toTopOf="@+id/register2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/gender_register" />
+        app:layout_constraintTop_toBottomOf="@+id/gym_register" />
+
+    <Button
+        android:id="@+id/register2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/register"
+        android:onClick="registerUser"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/interests_register"
+        app:layout_constraintVertical_bias="0.8" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
