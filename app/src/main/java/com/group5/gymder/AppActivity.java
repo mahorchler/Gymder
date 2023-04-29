@@ -63,12 +63,12 @@ public class AppActivity extends AppCompatActivity {
         });
 
         lastMessages = new ArrayList<>();
-
-        //setUserInfo();
         chatFragment.setUserList(userList);
         chatFragment.setLastMessages(lastMessages);
         searchFragment.setUserList(userList);
+
         replaceFragment(searchFragment);
+        binding.bottomNavigationView.setSelectedItemId(R.id.search);
         binding.bottomNavigationView.setOnItemSelectedListener(item -> {
             switch (item.getItemId()){
                 case R.id.chat:
