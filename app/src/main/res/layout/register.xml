@@ -49,11 +49,11 @@
         app:layout_constraintVertical_bias="0.100000024" />
 
     <EditText
-        android:id="@+id/town_register"
+        android:id="@+id/gym_register"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:hint="town..."
+        android:hint="gym..."
         android:minHeight="48dp"
         android:textColor="#000000"
         android:textColorHint="#373737"
@@ -76,7 +76,7 @@
         android:layout_margin="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/town_register" />
+        app:layout_constraintTop_toBottomOf="@+id/gym_register" />
 
     <EditText
         android:id="@+id/name_register"

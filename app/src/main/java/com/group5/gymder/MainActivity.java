@@ -62,6 +62,8 @@ public class MainActivity extends AppCompatActivity{
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
+                            email.setText("");
+                            password.setText("");
                             showAppActivity();
                         } else {
                             Toast.makeText(MainActivity.this, "Authentication failed.",

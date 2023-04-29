@@ -2,6 +2,7 @@ package com.group5.gymder;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -20,7 +21,7 @@ import com.group213.gymder.R;
 public class RegisterActivity extends AppCompatActivity {
     private TextView email;
     private TextView password;
-    private TextView town;
+    private TextView gym;
     private TextView confirmPassword;
     private TextView age;
     private TextView name;
@@ -37,7 +38,7 @@ public class RegisterActivity extends AppCompatActivity {
         email = findViewById(R.id.email_register);
         password = findViewById(R.id.password_register);
         confirmPassword = findViewById(R.id.confirm_register);
-        town = findViewById(R.id.town_register);
+        gym = findViewById(R.id.gym_register);
         age = findViewById(R.id.age_register);
         name = findViewById(R.id.name_register);
         gender = findViewById(R.id.gender_register);
@@ -49,7 +50,7 @@ public class RegisterActivity extends AppCompatActivity {
                 registerUser(view);
             }
         });
-        textViews = new TextView[]{email, password, confirmPassword, town, age, name, gender, interests};
+        textViews = new TextView[]{email, password, confirmPassword, gym, age, name, gender, interests};
         mAuth = FirebaseAuth.getInstance();
     }
 
@@ -65,23 +66,27 @@ public class RegisterActivity extends AppCompatActivity {
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if (task.isSuccessful()) {
-                        //save user data - in progress
-                        /*
-                        //User user = new User(username.getText().toString(), password.getText().toString(), email.getText().toString());
+                        User newUser = new User(mAuth.getCurrentUser().getUid(),email.getText().toString(), password.getText().toString());
+                        newUser.setName(name.getText().toString());
+                        newUser.setGym(gym.getText().toString());
+                        newUser.setAge(age.getText().toString());
+                        newUser.setGender(gender.getText().toString());
+                        newUser.setInterests(interests.getText().toString());
+                        newUser.setProfilePicture(null);
                         FirebaseDatabase.getInstance().getReference("users")
-                            .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
-                            .setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
+                            .child(mAuth.getCurrentUser().getUid())
+                            .setValue(newUser).addOnCompleteListener(new OnCompleteListener<Void>() {
                                 @Override
                                 public void onComplete(@NonNull Task<Void> task) {
                                     showAppActivity();
                                 }
                             });
-
-                         */
                         showAppActivity();
                     } else {
                         Toast.makeText(RegisterActivity.this, "Authentication failed.",
                                 Toast.LENGTH_LONG).show();
+                        String errorM = task.getException().getLocalizedMessage();
+                        Log.d("login",errorM);
                     }
                 }
             });

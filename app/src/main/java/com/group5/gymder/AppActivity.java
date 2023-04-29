@@ -41,7 +41,7 @@ public class AppActivity extends AppCompatActivity {
 
         userList = new ArrayList<>();
         lastMessages = new ArrayList<>();
-        setUserInfo();
+        //setUserInfo();
         chatFragment.setUserList(userList);
         chatFragment.setLastMessages(lastMessages);
         searchFragment.setUserList(userList);
@@ -69,6 +69,7 @@ public class AppActivity extends AppCompatActivity {
         fragmentTransaction.commit();
     }
 
+    /*
     public void setUserInfo(){
         User user = new User("Omar", "12345");
         user.setName("Omar");
@@ -103,4 +104,5 @@ public class AppActivity extends AppCompatActivity {
         userList.add(user);
         lastMessages.add("My name is Arnav.");
     }
+     */
 }

@@ -12,17 +12,11 @@ import java.util.HashMap;
 import java.util.Scanner;
 
 public class User implements Serializable{
-
-    private boolean isHost;
+    private String uid;
     private String email;
     private String password;
     private String name;
     private Drawable profilePicture;
-
-    /**
-     * List of Users Interest
-     */
-    private ArrayList<String> interests;
 
     /**
      * Gym user is subscribed to
@@ -32,36 +26,50 @@ public class User implements Serializable{
     /**
      * Age
      */
-    private int age;
+    private String age;
 
-    public User(String email, String password) {
+    /**
+     * Gender
+     */
+    private String gender;
+
+    /**
+     * User's Interests
+     */
+    private String interests;
+
+    /**
+     * pfp URL
+     */
+    private String pfp;
+
+    public User(){
+    }
+
+    public User(String uid, String email, String password) {
+        this.uid = uid;
         this.email = email;
         this.password = password;
-        isHost = false;
     }
 
-    public void addInterest(String interest) {
-        this.interests.add(interest);
-    }
+    public String getUid() { return this.uid; }
 
-    public ArrayList<String> getInterests(){
-        return this.interests;
-    }
-
-    public void setGym(String gym) {
-        this.gym = gym;
-    }
-
-    public String getGym() {
-        return this.gym;
-    }
-
-    public int getAge() {
-        return this.age;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public String getEmail() {
         return this.email;
+    }
+
+    public String getPassword(){ return this.password; }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
     }
 
     public void setProfilePicture(Drawable profilePicture){
@@ -72,33 +80,43 @@ public class User implements Serializable{
         return profilePicture;
     }
 
-    public String getName() {
-        return name;
+    public void setGym(String gym) {
+        this.gym = gym;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public String getGym() {
+        return this.gym;
     }
 
-    public void setAge(int age) {
+    public void setAge(String age) {
         this.age = age;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public String getAge() { return this.age; }
+
+    public void setGender(String gender) {
+        this.gender = gender;
     }
 
-    public String getPassword(){ return this.password; }
+    public String getGender() {
+        return this.gender;
+    }
 
-    public void setInterests(ArrayList<String> interests) {
+    public void setInterests(String interests) {
         this.interests = interests;
     }
 
-    public void setHost(boolean host) {
-        isHost = host;
+    public String getInterests(){
+        return this.interests;
     }
 
-    public boolean isHost(){return isHost;}
+    public void setPfp(String pfp) {
+        this.pfp = pfp;
+    }
+
+    public String getPfp(){
+        return this.pfp;
+    }
 
     public void likeUser(User user2) {
         File userFile = new File("likes.txt");
