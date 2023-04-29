@@ -66,7 +66,8 @@ public class ChatActivity extends AppCompatActivity {
     public void sendMessage(View view){
         String message = sendText.getText().toString();
         if (!message.isEmpty()) {
-            messageList.add(new Message(message, true));
+            //TODO: REPLCE WITH ACTUAL CURRENWT USER
+            messageList.add(new Message(message, true, new User()));
             messageAdapter.notifyItemInserted(messageList.size()-1);
             sendText.setText("");
         }
@@ -83,6 +84,7 @@ public class ChatActivity extends AppCompatActivity {
     private void setMessageList(){
         messageList = new ArrayList<>();
         String message = intent.getStringExtra("message");
-        messageList.add(new Message(message, false));
+        //TODO: REPLACE WITH ACTUAL CURRENT USER
+        messageList.add(new Message(message, false, new User()));
     }
 }
