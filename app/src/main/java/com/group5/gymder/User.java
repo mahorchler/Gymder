@@ -110,6 +110,12 @@ public class User implements Serializable{
         return this.interests;
     }
 
+    public String getMatches()
+    {
+        return null;
+    }
+
+
     public void setPfp(String pfp) {
         this.pfp = pfp;
     }

@@ -2,17 +2,26 @@ package com.group5.gymder;
 
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.SearchView;
 import android.widget.TextView;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.group213.gymder.R;
 
 import java.util.ArrayList;
@@ -29,6 +38,8 @@ public class SearchFragment extends Fragment {
     private SearchView searchView;
     private SearchAdapter searchAdapter;
     private View view;
+
+    private FirebaseAuth mAuth;
     
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -52,7 +63,9 @@ public class SearchFragment extends Fragment {
      * @return A new instance of fragment SearchFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static SearchFragment newInstance(String param1, String param2) {
+    public static SearchFragment newInstance(String param1, String param2)
+    {
+
         SearchFragment fragment = new SearchFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
@@ -63,7 +76,9 @@ public class SearchFragment extends Fragment {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
+
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
@@ -73,9 +88,12 @@ public class SearchFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
+
         view = inflater.inflate(R.layout.fragment_search, container, false);
         searchRecycler = view.findViewById(R.id.searchUsersRecycler);
         searchView = view.findViewById(R.id.filterUsers);
+
         setAdapter();
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
@@ -93,12 +111,15 @@ public class SearchFragment extends Fragment {
     }
 
     private void filterUsers(String s) {
+
         ArrayList<User> filteredList = new ArrayList<>();
+
         for (User user : userList) if (user.getEmail().toLowerCase(Locale.ROOT).startsWith(s)) filteredList.add(user);
         searchAdapter.setList(filteredList);
     }
 
     private void setAdapter(){
+
         searchAdapter = new SearchAdapter(view.getContext(), userList);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(view.getContext());
         searchRecycler.setLayoutManager(layoutManager);
@@ -106,7 +127,8 @@ public class SearchFragment extends Fragment {
         searchRecycler.setAdapter(searchAdapter);
     }
 
-    public void setUserList(ArrayList<User> userList) {
+    public void setUserList(ArrayList<User> userList)
+    {
         this.userList = userList;
     }
 }

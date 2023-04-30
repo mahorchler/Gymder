@@ -62,11 +62,37 @@ public class AppActivity extends AppCompatActivity {
             }
         });
 
+        /*reference.child(currentUser.getUid()).child("likes").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                Log.d("tims",userList.size()+"");
+                int loc=0;
+                while(loc<userList.size()-1)
+                {
+                    Log.d("tims","happened1");
+                    Log.d("tims",""+loc);
+                    if(snapshot.hasChild(userList.get(0).getUid()))
+                    {
+                        userList.remove(loc);
+                    }
+                    else if(userList.get(loc).getUid().equals(currentUser.getUid()))
+                    {
+                        userList.remove(loc);
+                    }
+                    else
+                        loc++;
+                }
+            }
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+            }
+        });*/
+
         lastMessages = new ArrayList<>();
+
         chatFragment.setUserList(userList);
         chatFragment.setLastMessages(lastMessages);
         searchFragment.setUserList(userList);
-
         replaceFragment(searchFragment);
         binding.bottomNavigationView.setSelectedItemId(R.id.search);
         binding.bottomNavigationView.setOnItemSelectedListener(item -> {

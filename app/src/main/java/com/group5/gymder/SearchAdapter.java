@@ -27,7 +27,9 @@ public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.MyViewHold
     }
 
     public void setList(ArrayList<User> filteredList) {
+
         usersList = filteredList;
+
         notifyDataSetChanged();
     }
 
@@ -65,6 +67,7 @@ public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.MyViewHold
             searchIntent.putExtra("name", profileName);
             searchIntent.putExtra("email", email);
             searchIntent.putExtra("age", user.getAge());
+            searchIntent.putExtra("uid", user.getUid());
             context.startActivity(searchIntent);
         });
     }

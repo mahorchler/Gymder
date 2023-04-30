@@ -18,6 +18,10 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.FirebaseDatabase;
 import com.group213.gymder.R;
 
+import java.sql.Connection;
+import java.util.HashMap;
+import java.util.Map;
+
 public class RegisterActivity extends AppCompatActivity {
     private TextView email;
     private TextView password;
@@ -78,6 +82,7 @@ public class RegisterActivity extends AppCompatActivity {
                         newUser.setGender(gender.getText().toString());
                         newUser.setInterests(interests.getText().toString());
                         newUser.setProfilePicture(null);
+                        Map<String,Object> m= new HashMap<>();
                         FirebaseDatabase.getInstance().getReference("users")
                             .child(mAuth.getCurrentUser().getUid())
                             .setValue(newUser).addOnCompleteListener(new OnCompleteListener<Void>() {
