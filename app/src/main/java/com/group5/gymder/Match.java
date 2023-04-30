@@ -12,6 +12,7 @@ public class Match {
     public Match(User u1, User u2) {
         this.u1 = u1;
         this.u2 = u2;
+        messageList = new ArrayList<Message>();
     }
 
     public User getU1() {
