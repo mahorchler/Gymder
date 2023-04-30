@@ -1,4 +1,4 @@
-# Gymder
+# Gymder (Group 5)
 Welcome to gymder! This is an application to find gym buddies that attend your gym. It is built using java and android xml and the database and user management system is built using google firebase. <br><br>
 
 # Run the APK
