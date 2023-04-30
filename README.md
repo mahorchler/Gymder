@@ -7,6 +7,6 @@ To run the application without having to setup the code in an IDE, run apk file 
 # Setting up the Code in an IDE (Android Studio)
 To set up the code in android studio, simply clone or download this repo and enter android studio. Select "import project" and select the downloaded Gymder folder as your project.
 
-#Testing
+# Testing
 To view the testing for this application, reference the submitted TSR. To view the unit tests visit app/src/test/java/com/group213/gymder or see the following link: https://github.com/mahorchler/Gymder/tree/main/app/src/test/java/com/group213/gymder <br>
 The unit tests were done using JUnit and Mockito and test the key business logic of the object oriented elements of the project
