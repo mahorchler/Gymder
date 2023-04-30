@@ -114,7 +114,11 @@ public class SearchFragment extends Fragment {
 
         ArrayList<User> filteredList = new ArrayList<>();
 
-        for (User user : userList) if (user.getEmail().toLowerCase(Locale.ROOT).startsWith(s)) filteredList.add(user);
+        for (User user : userList)
+            if(user.getEmail() != null) {
+                if (user.getEmail().toLowerCase(Locale.ROOT).startsWith(s))
+                    filteredList.add(user);
+            }
         searchAdapter.setList(filteredList);
     }
 

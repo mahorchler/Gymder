@@ -21,6 +21,7 @@ import com.group213.gymder.R;
 import java.sql.Connection;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.logging.Logger;
 
 public class RegisterActivity extends AppCompatActivity {
     private TextView email;
