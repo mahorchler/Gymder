@@ -58,6 +58,9 @@ public class ChatActivity extends AppCompatActivity {
             case "Ricky":
                 profilePicture.setImageDrawable(getDrawable(R.drawable.ricky));
                 break;
+            default:
+                profilePicture.setImageDrawable(getDrawable(R.drawable.ricky));
+                break;
         }
         setMessageList();
         setAdapter();

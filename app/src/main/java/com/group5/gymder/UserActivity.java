@@ -74,9 +74,9 @@ public class UserActivity extends AppCompatActivity {
         DatabaseReference ref = database.getReference().child("users").child(wow.getUid());
         ref.child("likes").child(intent.getStringExtra("uid")).setValue(true);
         DatabaseReference other = database.getReference().child("users").child(intent.getStringExtra("uid"));
-        Log.d("myTag", "This is my message before isMatch");
+        ArrayList<User> userlist=intent.getParcelableArrayListExtra("userlist");
+        for(int i=0)
         isMatch("");
-        Log.d("myTag", "This is my message");
         like.setForeground(AppCompatResources.getDrawable(this, R.drawable.ic_like_clicked));
         dislike.setForeground(AppCompatResources.getDrawable(this, R.drawable.ic_dislike_name));
 
@@ -86,19 +86,21 @@ public class UserActivity extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
         FirebaseUser cur=mAuth.getCurrentUser();//current user
         DatabaseReference rootRef = FirebaseDatabase.getInstance().getReference().child("users").child(intent.getStringExtra("uid")).child("likes");// loction of the other user to check the other user to see if they like current user or not
+
         rootRef.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot snapshot) {
 
                 if (snapshot.hasChild(cur.getUid())) {
                     // run some code
-                    Log.d("fuk me ","fuk yes");
+
                     DatabaseReference other = FirebaseDatabase.getInstance().getReference().child("users").child(intent.getStringExtra("uid"));
                     DatabaseReference currentuserloc = FirebaseDatabase.getInstance().getReference().child("users").child(cur.getUid());
                     String key= FirebaseDatabase.getInstance().getReference().child("chat").push().getKey();
                     FirebaseDatabase.getInstance().getReference().child("chat").child(key).push().setValue("We're matched " +cur.getEmail());
                     currentuserloc.child("matches").child(intent.getStringExtra("uid")).child("chatid:").setValue(key);
                     other.child("matches").child(cur.getUid()).child("chatid:").setValue(key);
+
 
                 }
                 else

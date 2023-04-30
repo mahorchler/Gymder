@@ -50,6 +50,7 @@ public class User implements Serializable{
         this.uid = uid;
         this.email = email;
         this.password = password;
+
     }
 
     public String getUid() { return this.uid; }

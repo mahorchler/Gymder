@@ -3,6 +3,7 @@ package com.group5.gymder;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +12,13 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.group213.gymder.R;
 
 import java.util.ArrayList;
@@ -22,6 +30,7 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.MyViewHolder> 
     private ArrayList<String> lastMessages;
     private Context context;
 
+    private FirebaseAuth mAuth;
     public ChatAdapter(Context context, ArrayList<User> usersList, ArrayList<String> lastMessages){
         this.usersList = usersList;
         this.lastMessages = lastMessages;
@@ -52,16 +61,16 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.MyViewHolder> 
     public void onBindViewHolder(@NonNull ChatAdapter.MyViewHolder holder, int position) {
         Drawable profilePicture = usersList.get(position).getProfilePicture();
         String profileName = usersList.get(position).getName();
-        String lastMessage = lastMessages.get(position);
+
         holder.profilePicture.setImageDrawable(profilePicture);
         holder.profileName.setText(profileName);
-        holder.lastMessage.setText(lastMessage);
+
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent chatIntent = new Intent(context, ChatActivity.class);
                 chatIntent.putExtra("name", profileName);
-                chatIntent.putExtra("message", lastMessage);
+                Log.d("happened","yea");
                 context.startActivity(chatIntent);
             }
         });

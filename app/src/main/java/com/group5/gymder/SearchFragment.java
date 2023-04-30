@@ -129,10 +129,16 @@ public class SearchFragment extends Fragment {
         searchRecycler.setLayoutManager(layoutManager);
         searchRecycler.setItemAnimator(new DefaultItemAnimator());
         searchRecycler.setAdapter(searchAdapter);
-    }
 
+    }
+    public void refresh()
+    {
+        searchAdapter.notifyDataSetChanged();
+    }
     public void setUserList(ArrayList<User> userList)
     {
+
         this.userList = userList;
+
     }
 }

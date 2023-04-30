@@ -24,6 +24,8 @@ public class ChatFragment extends Fragment {
     private RecyclerView chatRecyclerView;
     private ArrayList<User> userList;
     private ArrayList<String> lastMessages;
+
+    public ChatAdapter chatAdapter;
     View view;
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -75,11 +77,16 @@ public class ChatFragment extends Fragment {
         return view;
     }
     private void setAdapter(){
-        ChatAdapter chatAdapter = new ChatAdapter(view.getContext(), userList, lastMessages);
+         chatAdapter = new ChatAdapter(view.getContext(), userList, lastMessages);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(view.getContext());
         chatRecyclerView.setLayoutManager(layoutManager);
         chatRecyclerView.setItemAnimator(new DefaultItemAnimator());
         chatRecyclerView.setAdapter(chatAdapter);
+    }
+    public void refresh()
+    {
+        if(chatAdapter!=null)
+        chatAdapter.notifyDataSetChanged();
     }
 
     public ArrayList<String> getLastMessages() {
