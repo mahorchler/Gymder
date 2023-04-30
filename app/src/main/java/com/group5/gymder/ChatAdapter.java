@@ -61,7 +61,7 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.MyViewHolder> 
     public void onBindViewHolder(@NonNull ChatAdapter.MyViewHolder holder, int position) {
         Drawable profilePicture = usersList.get(position).getProfilePicture();
         String profileName = usersList.get(position).getName();
-
+        String uid= usersList.get(position).getUid();
         holder.profilePicture.setImageDrawable(profilePicture);
         holder.profileName.setText(profileName);
 
@@ -70,6 +70,7 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.MyViewHolder> 
             public void onClick(View view) {
                 Intent chatIntent = new Intent(context, ChatActivity.class);
                 chatIntent.putExtra("name", profileName);
+                chatIntent.putExtra("uid",uid);
                 Log.d("happened","yea");
                 context.startActivity(chatIntent);
             }

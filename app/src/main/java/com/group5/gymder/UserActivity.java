@@ -74,8 +74,6 @@ public class UserActivity extends AppCompatActivity {
         DatabaseReference ref = database.getReference().child("users").child(wow.getUid());
         ref.child("likes").child(intent.getStringExtra("uid")).setValue(true);
         DatabaseReference other = database.getReference().child("users").child(intent.getStringExtra("uid"));
-        ArrayList<User> userlist=intent.getParcelableArrayListExtra("userlist");
-        for(int i=0)
         isMatch("");
         like.setForeground(AppCompatResources.getDrawable(this, R.drawable.ic_like_clicked));
         dislike.setForeground(AppCompatResources.getDrawable(this, R.drawable.ic_dislike_name));
@@ -98,8 +96,8 @@ public class UserActivity extends AppCompatActivity {
                     DatabaseReference currentuserloc = FirebaseDatabase.getInstance().getReference().child("users").child(cur.getUid());
                     String key= FirebaseDatabase.getInstance().getReference().child("chat").push().getKey();
                     FirebaseDatabase.getInstance().getReference().child("chat").child(key).push().setValue("We're matched " +cur.getEmail());
-                    currentuserloc.child("matches").child(intent.getStringExtra("uid")).child("chatid:").setValue(key);
-                    other.child("matches").child(cur.getUid()).child("chatid:").setValue(key);
+                    currentuserloc.child("matches").child(intent.getStringExtra("uid")).child("chatid").setValue(key);
+                    other.child("matches").child(cur.getUid()).child("chatid").setValue(key);
 
 
                 }
