@@ -96,7 +96,7 @@ public class UserActivity extends AppCompatActivity {
                     DatabaseReference other = FirebaseDatabase.getInstance().getReference().child("users").child(intent.getStringExtra("uid"));
                     DatabaseReference currentuserloc = FirebaseDatabase.getInstance().getReference().child("users").child(cur.getUid());
                     String key= FirebaseDatabase.getInstance().getReference().child("chat").push().getKey();
-                    FirebaseDatabase.getInstance().getReference().child("chat").child(key).push().setValue("We're matched");
+                    FirebaseDatabase.getInstance().getReference().child("chat").child(key).push().setValue("We're matched " +cur.getEmail());
                     currentuserloc.child("matches").child(intent.getStringExtra("uid")).child("chatid:").setValue(key);
                     other.child("matches").child(cur.getUid()).child("chatid:").setValue(key);
 
