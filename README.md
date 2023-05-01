@@ -10,6 +10,8 @@ One example we found to run APKs is through this online emulator service: https:
 To set up the code in android studio, simply clone or download this repo and enter android studio. Select "import project" and select the downloaded Gymder folder as your project.
 
 # Parts of the application
+<h1>Login</h1>
+<br>Here you can register or login to an existing account. If you want some premade logins to test out with, we have arnav@gmail.com maylin@gmail.com ricky@gmail.com and the password to all of those is 123456. Those three logins all have a match so you can test the chat through there. Alternatively you could make multiple accounts and match them manually. 
 <br> <h1>Chat</h1><br><br>
 In the chat section, you can chat with users. The chat functionality will open between two users once those two users are matched (have both liked each other). These messages update live and can be sent to one another in real time.
 <br><br>
