@@ -3,6 +3,8 @@ Welcome to gymder! This is an application to find gym buddies that attend your g
 
 # Run the APK
 To run the application without having to setup the code in an IDE, run apk file found in the home directory of this repo. This can be done using many android emulators such as Bluestacks or downloading onto an actual android device.
+<br><br>
+One example we found to run APKs is through this online emulator service: https://www.apkonline.net/filemanager.php?username=1114743# though this can be done through downloading the apk through android studio or simply directly onto an android device. Simply hit the >Run APK button after uplaoding the APK to the service. 
 
 # Setting up the Code in an IDE (Android Studio)
 To set up the code in android studio, simply clone or download this repo and enter android studio. Select "import project" and select the downloaded Gymder folder as your project.
