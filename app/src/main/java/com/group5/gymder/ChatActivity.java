@@ -39,16 +39,24 @@ public class ChatActivity extends AppCompatActivity {
     private TextView sendText;
     private ImageButton send;
     private RecyclerView messageRecycler;
-    private ArrayList<Message> messageList;
+    private ArrayList<Message> messageList=  new ArrayList<Message>();
     private MessageAdapter messageAdapter;
     private FirebaseAuth mAuth;
     private String currentUserID;
     private String rchatid;
 
+    private String matchId;
+
+    DatabaseReference mDataBaseUser, mDataBaseChat;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.chat);
+        matchId=getIntent().getExtras().getString("uid");
+        mDataBaseChat=FirebaseDatabase.getInstance().getReference().child("chat");
+        currentUserID=FirebaseAuth.getInstance().getCurrentUser().getUid();
+        mDataBaseUser=FirebaseDatabase.getInstance().getReference().child("users").child(currentUserID).child("matches").child(matchId);
+        getchatid();
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("");
@@ -79,8 +87,8 @@ public class ChatActivity extends AppCompatActivity {
                 profilePicture.setImageDrawable(getDrawable(R.drawable.ricky));
                 break;
         }
-        setMessageList();
 
+        setAdapter();
     }
 
     public void sendMessage(View view){
@@ -105,8 +113,7 @@ public class ChatActivity extends AppCompatActivity {
                 mes.put("text",message);
                 if (!message.isEmpty()) {
                     //TODO: REPLCE WITH ACTUAL CURRENWT USER
-                    messageList.add(new Message(message, true));
-                    messageAdapter.notifyItemInserted(messageList.size()-1);
+
                     sendText.setText("");
                 }
                 ref.child(chatid).push().setValue(mes);
@@ -125,9 +132,8 @@ public class ChatActivity extends AppCompatActivity {
     public void getmessages()
     {
 
-        final FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference ref= database.getReference().child("chat").child(rchatid);
-        ref.addChildEventListener(new ChildEventListener() {
+
+        mDataBaseChat.addChildEventListener(new ChildEventListener() {
             @Override
             public void onChildAdded(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
                 if(snapshot.exists())
@@ -149,8 +155,10 @@ public class ChatActivity extends AppCompatActivity {
                         {
                             currentUserBoolean=true;
                         }
-
+                        messageList.add(new Message(message, currentUserBoolean));
+                        messageAdapter.notifyDataSetChanged();
                     }
+
                 }
             }
 
@@ -174,8 +182,9 @@ public class ChatActivity extends AppCompatActivity {
 
             }
         });
-        mAuth = FirebaseAuth.getInstance();
+
     }
+
     private void setAdapter(){
         messageAdapter = new MessageAdapter(getApplicationContext(), messageList);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getApplicationContext());
@@ -185,50 +194,14 @@ public class ChatActivity extends AppCompatActivity {
     }
     public void getchatid()
     {
-
-
-    }
-    private void setMessageList(){
-
-        messageList = new ArrayList<>();
-        String message = intent.getStringExtra("message");
-        //TODO: REPLACE WITH ACTUAL CURRENT USER
-        messageList.add(new Message(message, false));
-        String other=intent.getStringExtra("uid");
-        final FirebaseDatabase database = FirebaseDatabase.getInstance();
-        mAuth = FirebaseAuth.getInstance();
-        FirebaseUser cur=mAuth.getCurrentUser();
-        currentUserID=cur.getUid();
-        DatabaseReference ref = database.getReference().child("chat");
-        Log.d("chat","|"+other+"|"+ cur.getUid());
-        DatabaseReference chat= database.getReference().child("users").child(cur.getUid()).child("matches").child(other).child("chatid");
-        chat.addListenerForSingleValueEvent(new ValueEventListener() {//getting chatid
+        mDataBaseUser.child("chatid").addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
-            public void onDataChange(DataSnapshot snapshot)
+            public void onDataChange(@NonNull DataSnapshot snapshot)
             {
-                String chatid=snapshot.getValue().toString();
-                rchatid=chatid;
-                ref.child(rchatid).addListenerForSingleValueEvent(new ValueEventListener() {
-                    @Override
-                    public void onDataChange(@NonNull DataSnapshot snapshot)
-                    {
-                        for (DataSnapshot s:snapshot.getChildren())
-                        {
-
-                            Log.d("jesus",s.child("text").getValue().toString());
-                            String sender=s.child("sender").getValue().toString();
-                            String text=s.child("text").getValue().toString();
-                            Boolean host=currentUserID.equals(sender);
-                            messageList.add(new Message(text, host));
-                        }
-                        setAdapter();
-                    }
-
-                    @Override
-                    public void onCancelled(@NonNull DatabaseError error) {
-
-                    }
-                });
+                    rchatid = snapshot.getValue().toString();
+                    Log.d("really bro",rchatid);
+                    mDataBaseChat= mDataBaseChat.child(rchatid);
+                    getmessages();
 
             }
 
@@ -237,7 +210,6 @@ public class ChatActivity extends AppCompatActivity {
 
             }
         });
-
-
     }
+
 }
