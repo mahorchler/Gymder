@@ -114,6 +114,36 @@ public class UserActivity extends AppCompatActivity {
         });
     }
             public void dislike(View view){
+        Log.d("dislike","e");
+        final FirebaseDatabase database = FirebaseDatabase.getInstance();
+        mAuth = FirebaseAuth.getInstance();
+        FirebaseUser currentUser=mAuth.getCurrentUser();
+        String otheruser=intent.getStringExtra("uid");
+        DatabaseReference hostref = database.getReference().child("users").child(currentUser.getUid()).child("matches").child(otheruser);
+        DatabaseReference otherref = database.getReference().child("users").child(otheruser).child("matches").child(currentUser.getUid());
+        DatabaseReference chatref = database.getReference().child("chat");
+       hostref.addListenerForSingleValueEvent(new ValueEventListener() {
+           @Override
+           public void onDataChange(@NonNull DataSnapshot snapshot)
+           {
+                if(snapshot.exists())//matched
+                {
+                    Log.d("dislike",currentUser.getUid());
+                    String chatid=snapshot.child("chatid").getValue().toString();
+                    Log.d("dislike",chatid);
+                    hostref.removeValue();
+                    otherref.removeValue();
+                    chatref.child(chatid).removeValue();
+                }
+           }
+
+           @Override
+           public void onCancelled(@NonNull DatabaseError error) {
+
+           }
+       });
+
+
         like.setForeground(AppCompatResources.getDrawable(this, R.drawable.ic_like_name));
         dislike.setForeground(AppCompatResources.getDrawable(this, R.drawable.ic_dislike_clicked));
     }

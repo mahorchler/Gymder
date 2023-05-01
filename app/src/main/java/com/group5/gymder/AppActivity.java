@@ -90,7 +90,7 @@ public class AppActivity extends AppCompatActivity {
                                 matches.add(userList.get(i));
                             }
                         }
-                        reference.child(currentUser.getUid()).child("likes").addValueEventListener(new ValueEventListener() {
+                        /*reference.child(currentUser.getUid()).child("likes").addValueEventListener(new ValueEventListener() {
                             @Override
                             public void onDataChange(@NonNull DataSnapshot snapshot) {
                                 int loc=0;
@@ -114,7 +114,7 @@ public class AppActivity extends AppCompatActivity {
                             @Override
                             public void onCancelled(@NonNull DatabaseError error) {
                             }
-                        });
+                        });*/ //remove liked user but guess not
                     }
                     @Override
                     public void onCancelled(@NonNull DatabaseError error) {
