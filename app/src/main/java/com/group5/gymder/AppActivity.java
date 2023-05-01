@@ -70,7 +70,7 @@ public class AppActivity extends AppCompatActivity {
                 for (DataSnapshot s: snapshot.getChildren()){
 
                     String uid=s.child("uid").getValue().toString();
-                    if(!userList.stream().anyMatch(o -> uid.equals(o.getUid())))
+                    if(!(userList.stream().anyMatch(o -> uid.equals(o.getUid()))) && !(uid.equals(currentUser.getUid())))
                     {
                         userList.add((User) s.getValue(User.class));
                     }
