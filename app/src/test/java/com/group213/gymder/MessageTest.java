@@ -9,7 +9,7 @@ import org.junit.*;
 
 public class MessageTest {
 
-    Message m = new Message("content", true, new User());
+    Message m = new Message("content", true);
 
     @Test
     public void testGetMessage() {

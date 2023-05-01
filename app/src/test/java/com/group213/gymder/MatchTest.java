@@ -23,7 +23,7 @@ public class MatchTest {
 
     @Test
     public void testAddMessage() {
-        Message mess = new Message("Hello this is the first message", false, new User());
+        Message mess = new Message("Hello this is the first message", false);
         m.addMessage(mess);
         assertEquals(m.getMessages().get(0), mess);
     }
