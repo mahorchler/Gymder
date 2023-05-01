@@ -6,10 +6,9 @@ public class Message {
 
     private User sender;
 
-    public Message(String message, boolean senderIsHost, User sender){
+    public Message(String message, boolean senderIsHost){
         this.message = message;
         this.senderIsHost = senderIsHost;
-        this.sender = sender;
     }
 
     public String getMessage() {

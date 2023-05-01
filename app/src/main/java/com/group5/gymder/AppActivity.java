@@ -82,7 +82,8 @@ public class AppActivity extends AppCompatActivity {
 
                         for(int i=0;i<userList.size();i++)
                         {
-                            if(snapshot.hasChild(userList.get(i).getUid()))
+                            String uid=userList.get(i).getUid();
+                            if(snapshot.hasChild(userList.get(i).getUid())&&!matches.stream().anyMatch(o -> uid.equals(o.getUid())))
                             {
                                 searchFragment.refresh();
                                 chatFragment.refresh();

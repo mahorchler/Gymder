@@ -91,11 +91,13 @@ public class UserActivity extends AppCompatActivity {
 
                 if (snapshot.hasChild(cur.getUid())) {
                     // run some code
-
+                    Map g= new HashMap<String,String>();
+                    g.put("sender",cur.getUid());
+                    g.put("text","We're matched");
                     DatabaseReference other = FirebaseDatabase.getInstance().getReference().child("users").child(intent.getStringExtra("uid"));
                     DatabaseReference currentuserloc = FirebaseDatabase.getInstance().getReference().child("users").child(cur.getUid());
                     String key= FirebaseDatabase.getInstance().getReference().child("chat").push().getKey();
-                    FirebaseDatabase.getInstance().getReference().child("chat").child(key).push().setValue("We're matched " +cur.getEmail());
+                    FirebaseDatabase.getInstance().getReference().child("chat").child(key).push().setValue(g);
                     currentuserloc.child("matches").child(intent.getStringExtra("uid")).child("chatid").setValue(key);
                     other.child("matches").child(cur.getUid()).child("chatid").setValue(key);
 
