@@ -2,15 +2,25 @@ package com.group5.gymder;
 
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.ChildEventListener;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.group213.gymder.R;
 
 import java.util.ArrayList;
@@ -22,9 +32,9 @@ import java.util.ArrayList;
  */
 public class ChatFragment extends Fragment {
     private RecyclerView chatRecyclerView;
-    private ArrayList<User> userList;
+    private ArrayList<User> userList = new ArrayList<User>();
     private ArrayList<String> lastMessages;
-
+    private DatabaseReference mDataBaseUser;
     public ChatAdapter chatAdapter;
     View view;
     // TODO: Rename parameter arguments, choose names that match
@@ -36,6 +46,7 @@ public class ChatFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
+    private String currentUserID;
     public ChatFragment() {
         // Required empty public constructor
     }
@@ -73,6 +84,7 @@ public class ChatFragment extends Fragment {
         // Inflate the layout for this fragment
         view = inflater.inflate(R.layout.fragment_chat, container, false);
         chatRecyclerView = view.findViewById(R.id.chatView);
+        getusers();
         setAdapter();
         return view;
     }
@@ -87,6 +99,49 @@ public class ChatFragment extends Fragment {
     {
         if(chatAdapter!=null)
         chatAdapter.notifyDataSetChanged();
+    }
+    public void getusers()
+    {
+        FirebaseAuth mAuth = FirebaseAuth.getInstance();
+        FirebaseUser cur=mAuth.getCurrentUser();
+        currentUserID=cur.getUid();
+        mDataBaseUser= FirebaseDatabase.getInstance().getReference().child("users").child(currentUserID).child("matches");
+        mDataBaseUser.addChildEventListener(new ChildEventListener() {
+            @Override
+            public void onChildAdded(@NonNull DataSnapshot snapshot, @Nullable String previousChildName)
+            {
+                Log.d("added","yea");
+            }
+
+            @Override
+            public void onChildChanged(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
+
+            }
+
+            @Override
+            public void onChildRemoved(@NonNull DataSnapshot snapshot)
+            {
+                for(int i=0;i<userList.size();i++)
+                {
+                    if(!snapshot.hasChild(userList.get(i).getUid()))
+                    {
+                        userList.remove(i);
+                        refresh();
+                    }
+                }
+            }
+
+            @Override
+            public void onChildMoved(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
     }
 
     public ArrayList<String> getLastMessages() {
