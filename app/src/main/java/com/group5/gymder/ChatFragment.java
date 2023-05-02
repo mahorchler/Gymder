@@ -89,7 +89,7 @@ public class ChatFragment extends Fragment {
         return view;
     }
     private void setAdapter(){
-         chatAdapter = new ChatAdapter(view.getContext(), userList, lastMessages);
+        chatAdapter = new ChatAdapter(view.getContext(), userList, lastMessages);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(view.getContext());
         chatRecyclerView.setLayoutManager(layoutManager);
         chatRecyclerView.setItemAnimator(new DefaultItemAnimator());
@@ -97,8 +97,7 @@ public class ChatFragment extends Fragment {
     }
     public void refresh()
     {
-        if(chatAdapter!=null)
-        chatAdapter.notifyDataSetChanged();
+        if(chatAdapter!=null) chatAdapter.notifyDataSetChanged();
     }
     public void getusers()
     {

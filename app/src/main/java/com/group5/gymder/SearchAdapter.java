@@ -59,7 +59,12 @@ public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.MyViewHold
         Drawable profilePicture = user.getProfilePicture();
         String profileName = user.getName();
         String email = user.getEmail();
-        holder.searchProfilePicture.setImageDrawable(profilePicture);
+        if(profilePicture==null){
+            holder.searchProfilePicture.setImageResource(R.mipmap.defaultpfp);
+        }
+        else{
+            holder.searchProfilePicture.setImageDrawable(profilePicture);
+        }
         holder.searchName.setText(profileName);
         holder.searchEmail.setText(email);
         holder.itemView.setOnClickListener(view -> {

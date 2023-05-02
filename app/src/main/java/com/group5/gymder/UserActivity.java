@@ -64,7 +64,7 @@ public class UserActivity extends AppCompatActivity {
         username.setText(intent.getStringExtra("username"));
         String ageString = intent.getStringExtra("age") + " years old";
         age.setText(ageString);
-        profilePicture.setImageResource(R.drawable.omar);
+        profilePicture.setImageResource(R.mipmap.defaultpfp);
     }
 
     public void like(View view){

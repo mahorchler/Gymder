@@ -40,13 +40,13 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.MyViewHolder> 
     public class MyViewHolder extends RecyclerView.ViewHolder{
         private CircleImageView profilePicture;
         private TextView profileName;
-        private TextView lastMessage;
+        //private TextView lastMessage;
 
         public MyViewHolder(final View view){
             super(view);
             profilePicture = view.findViewById(R.id.profilePicture);
             profileName = view.findViewById(R.id.tvName);
-            lastMessage = view.findViewById(R.id.tvRecentMessage);
+            //lastMessage = view.findViewById(R.id.tvRecentMessage);
         }
     }
 
@@ -60,9 +60,14 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.MyViewHolder> 
     @Override
     public void onBindViewHolder(@NonNull ChatAdapter.MyViewHolder holder, int position) {
         Drawable profilePicture = usersList.get(position).getProfilePicture();
+        if(profilePicture==null){
+            holder.profilePicture.setImageResource(R.mipmap.defaultpfp);
+        }
+        else{
+            holder.profilePicture.setImageDrawable(profilePicture);
+        }
         String profileName = usersList.get(position).getName();
         String uid= usersList.get(position).getUid();
-        holder.profilePicture.setImageDrawable(profilePicture);
         holder.profileName.setText(profileName);
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {

@@ -70,6 +70,8 @@ public class ChatActivity extends AppCompatActivity {
         intent = getIntent();
         String userName = intent.getStringExtra("name");
         name.setText(userName);
+        profilePicture.setImageResource(R.mipmap.defaultpfp);
+        /*
         switch (userName){
             case "Omar":
                 profilePicture.setImageDrawable(getDrawable(R.drawable.omar));
@@ -87,6 +89,7 @@ public class ChatActivity extends AppCompatActivity {
                 profilePicture.setImageDrawable(getDrawable(R.drawable.ricky));
                 break;
         }
+         */
 
         setAdapter();
     }
