@@ -16,7 +16,6 @@ public class User implements Serializable{
     private String email;
     private String password;
     private String name;
-    private Drawable profilePicture;
 
     /**
      * Gym user is subscribed to
@@ -71,14 +70,6 @@ public class User implements Serializable{
 
     public String getName() {
         return name;
-    }
-
-    public void setProfilePicture(Drawable profilePicture){
-        this.profilePicture = profilePicture;
-    }
-
-    public Drawable getProfilePicture() {
-        return profilePicture;
     }
 
     public void setGym(String gym) {

@@ -59,12 +59,11 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.MyViewHolder> 
 
     @Override
     public void onBindViewHolder(@NonNull ChatAdapter.MyViewHolder holder, int position) {
-        Drawable profilePicture = usersList.get(position).getProfilePicture();
-        if(profilePicture==null){
-            holder.profilePicture.setImageResource(R.mipmap.defaultpfp);
-        }
-        else{
-            holder.profilePicture.setImageDrawable(profilePicture);
+        //Drawable profilePicture = usersList.get(position).getProfilePicture();
+        String pfp = usersList.get(position).getPfp();
+        holder.profilePicture.setImageResource(R.mipmap.defaultpfp);
+        if(pfp!=null){
+            //holder.profilePicture.setImageDrawable(profilePicture);
         }
         String profileName = usersList.get(position).getName();
         String uid= usersList.get(position).getUid();

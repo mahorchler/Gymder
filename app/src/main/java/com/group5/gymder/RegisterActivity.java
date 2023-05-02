@@ -82,7 +82,7 @@ public class RegisterActivity extends AppCompatActivity {
                         newUser.setAge(age.getText().toString());
                         newUser.setGender(gender.getText().toString());
                         newUser.setInterests(interests.getText().toString());
-                        newUser.setProfilePicture(null);
+                        newUser.setPfp(null);
                         Map<String,Object> m= new HashMap<>();
                         FirebaseDatabase.getInstance().getReference("users")
                             .child(mAuth.getCurrentUser().getUid())

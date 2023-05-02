@@ -56,14 +56,13 @@ public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.MyViewHold
     @Override
     public void onBindViewHolder(@NonNull SearchAdapter.MyViewHolder holder, int position) {
         User user = usersList.get(position);
-        Drawable profilePicture = user.getProfilePicture();
+        //Drawable profilePicture = user.getProfilePicture();
+        String pfp = user.getPfp();
         String profileName = user.getName();
         String email = user.getEmail();
-        if(profilePicture==null){
-            holder.searchProfilePicture.setImageResource(R.mipmap.defaultpfp);
-        }
-        else{
-            holder.searchProfilePicture.setImageDrawable(profilePicture);
+        holder.searchProfilePicture.setImageResource(R.mipmap.defaultpfp);
+        if(pfp!=null){
+            //holder.searchProfilePicture.setImageDrawable(pfp);
         }
         holder.searchName.setText(profileName);
         holder.searchEmail.setText(email);

@@ -1,21 +1,31 @@
 package com.group5.gymder;
 
+import android.app.Activity;
+import android.content.ContentResolver;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
+import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 
+import android.provider.MediaStore;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.MimeTypeMap;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -23,7 +33,13 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
+import com.google.firebase.storage.UploadTask;
 import com.group213.gymder.R;
+
+import java.util.HashMap;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
@@ -42,16 +58,17 @@ public class ProfileFragment extends Fragment{
     private TextView gym;
     private TextView interests;
     private Button editProfile;
+    //private Button uploadPicture;
     private Button delete;
-
     private Button logout;
-
     private FirebaseAuth mAuth;
+    private String pfpString;
     private String password;
     private String ageString;
     private String genderString;
     private String gymString;
     private String interestsString;
+    StorageReference sr;
 
     private View view;
     // TODO: Rename parameter arguments, choose names that match
@@ -100,6 +117,7 @@ public class ProfileFragment extends Fragment{
         View view = inflater.inflate(R.layout.fragment_profile, container, false);
         mAuth = FirebaseAuth.getInstance();
         FirebaseUser currentUser = mAuth.getCurrentUser();
+        sr = FirebaseStorage.getInstance().getReference();
         name = view.findViewById(R.id.profileName);
         toolbar = view.findViewById(R.id.profileToolbar);
         pfp = view.findViewById(R.id.profilePFP);
@@ -120,6 +138,7 @@ public class ProfileFragment extends Fragment{
                 User user = snapshot.getValue(User.class);
                 if (user != null) {
                     name.setText(user.getName());
+                    pfpString = user.getPfp();
                     ageString = user.getAge();
                     age.setText(ageString + " years old");
                     genderString = user.getGender();
@@ -137,14 +156,24 @@ public class ProfileFragment extends Fragment{
             }
         });
 
-        if (pfp == null) {
+        this.pfp.setImageResource(R.mipmap.defaultpfp);
+        if (pfpString != null) {
             this.pfp.setImageResource(R.mipmap.defaultpfp);
         }
-        else this.pfp.setImageDrawable(pfp);
 
         this.view = view;
         editProfile = view.findViewById(R.id.profileEdit);
         editProfile.setOnClickListener(view1 -> editProfile());
+        /*
+        uploadPicture = view.findViewById(R.id.profileUploadPicture);
+        uploadPicture.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent openGalleryIntent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+                startActivityForResult(openGalleryIntent, 1000);
+            }
+        });
+         */
         delete = view.findViewById(R.id.profileDelete);
         delete.setOnClickListener(view1 -> deleteProfile());
         logout = view.findViewById(R.id.profileLogout);
@@ -155,6 +184,41 @@ public class ProfileFragment extends Fragment{
             }
         });
         return view;
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, @androidx.annotation.Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if(requestCode == 1000){
+            if(resultCode == Activity.RESULT_OK){
+                Uri imageUri = data.getData();
+                uploadImage(imageUri);
+            }
+        }
+    }
+
+    private String getFileExtension(Uri uri){
+        ContentResolver cr = getContext().getContentResolver();
+        MimeTypeMap mtm = MimeTypeMap.getSingleton();
+        return mtm.getExtensionFromMimeType(cr.getType(uri));
+    }
+
+    private void uploadImage(Uri imageUri) {
+        String imageFileName = mAuth.getCurrentUser().getUid() + "." + getFileExtension(imageUri);
+        StorageReference fileRef = sr.child(imageFileName);
+        fileRef.putFile(imageUri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+            @Override
+            public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                DatabaseReference ref = FirebaseDatabase.getInstance().getReference("users").child(mAuth.getCurrentUser().getUid());
+                ref.child("pfp").setValue(imageFileName);
+                Toast.makeText(getContext(), "Image Uploaded", Toast.LENGTH_SHORT).show();
+            }
+        }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                Toast.makeText(getContext(), "Image Upload Failed", Toast.LENGTH_LONG).show();
+            }
+        });
     }
 
     private void editProfile() {

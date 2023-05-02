@@ -14,6 +14,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.group213.gymder.R;
 
@@ -66,13 +67,22 @@ public class EditProfileActivity extends AppCompatActivity {
             return;
         }
 
+        DatabaseReference ref = FirebaseDatabase.getInstance().getReference("users").child(mAuth.getCurrentUser().getUid());
+        ref.child("name").setValue(name.getText().toString());
+        ref.child("gym").setValue(gym.getText().toString());
+        ref.child("age").setValue(age.getText().toString());
+        ref.child("gender").setValue(gender.getText().toString());
+        ref.child("interests").setValue(interests.getText().toString());
+        Toast.makeText(EditProfileActivity.this, "Update success", Toast.LENGTH_SHORT).show();
+        finish();
+        /*
         User newUser = new User(mAuth.getCurrentUser().getUid(),email.getText().toString(), password.getText().toString());
         newUser.setName(name.getText().toString());
         newUser.setGym(gym.getText().toString());
         newUser.setAge(age.getText().toString());
         newUser.setGender(gender.getText().toString());
         newUser.setInterests(interests.getText().toString());
-        newUser.setProfilePicture(null);
+        newUser.setPfp(null);
         FirebaseDatabase.getInstance().getReference("users")
                 .child(mAuth.getCurrentUser().getUid())
                 .setValue(newUser).addOnCompleteListener(new OnCompleteListener<Void>() {
@@ -89,5 +99,7 @@ public class EditProfileActivity extends AppCompatActivity {
                         }
                     }
                 });
+
+         */
     }
 }
