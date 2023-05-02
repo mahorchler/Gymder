@@ -16,7 +16,7 @@ To set up the code in android studio, simply clone or download this repo and ent
 In the chat section, you can chat with users. The chat functionality will open between two users once those two users are matched (have both liked each other). These messages update live and can be sent to one another in real time.
 <br><br>
 <h1>Search</h1><br><br>
-In the search section, you can see a list of all users and click on their profiles. From there, you can like or dislike them.
+In the search section, you can see a list of all users and click on their profiles. From there, you can like or dislike them. Disliking a user you have been matched with will unmatch you with that user (fulfilling the unmatch requirement).
 <br><br>
 <h1>Profile</h1><br><br>
 From the profile section, you can see and edit your own profile as well as log out or delete your account. 
